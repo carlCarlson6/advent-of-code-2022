@@ -1,6 +1,7 @@
 package day1
 
 import readDayData
+import readTestDayData
 
 fun main() {
     executeTest()
@@ -9,7 +10,7 @@ fun main() {
 
 fun executeTest() {
     println("with test data")
-    val data = "1000\n2000\n3000\n\n4000\n\n5000\n6000\n\n7000\n8000\n9000\n\n1000"
+    var data = readTestDayData(1)
     var calculator = CaloriesCalculator(data)
     println("max calories: ${calculator.calculateSumMaxCalories()}")
     println("top3 sum: ${calculator.calculateTop3SumCalories()}")

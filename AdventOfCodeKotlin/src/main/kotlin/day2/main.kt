@@ -1,6 +1,7 @@
 package day2
 
 import readDayData
+import readTestDayData
 
 fun main() {
     executeTest()
@@ -9,7 +10,7 @@ fun main() {
 
 fun executeTest() {
     println("with test data")
-    val data = "A Y\nB X\nC Z"
+    val data = readTestDayData(1)
     val game = Game(data)
     println("total game score: ${game.calculateTotalScore()}")
     println("total game score: ${game.calculateTotalScoreFromIntendedResults()} - desired")
